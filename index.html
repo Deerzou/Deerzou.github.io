@@ -1,90 +1,43 @@
-﻿
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>视频通话</title>
-  <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'>
-  </script>
-  <body background="BJ3.jpg" style=" background-repeat:no-repeat ;background-size:100% 100%;
-				background-attachment: fixed;"/>
+  <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  
-  <div class="line-height:10px;"></div>
-  <div><a><font face="隶书" size="+5" color="beige"> <center>视频通话</center></font>
-  	<marquee><pre>网络一线牵，珍惜这段缘！！                                                                                                                                           接了这个电话你就是我的小仙女了哦！</pre></marquee></a>
-  	
-  </div>
-         <style>
-  	html,body{margin:0;}
-  </style>
-      </header> 
-     <embed src="OMFG - Hello.mp3"  autostart="true" height=15 width=15 align="right"/>
-   <script>
-            function time(){
-                var date = new Date();
-                var year = date.getFullYear();
-                var month = date.getMonth()+1;
-                var day = date.getDate();
-                var week = date.getDay();
-                week="星期"+"日一二三四五六".charAt(week);                      
-                var hour =date.getHours();
-                hour=hour<10?"0"+hour:hour;
-                var minute =date.getMinutes();
-                minute=minute<10?"0"+minute:minute;
-                var second = date.getSeconds();
-                second=second<10?"0"+second:second;
-                var currentTime = year+"-"+month+"-"+day+"  "+week+"   "+hour+":"+minute+":"+second;
-                document.getElementById("time").innerHTML=currentTime;
-            }
-            setInterval("time()",1000);
-            </script>
   <style>
-       video{
-        
-        border:1px solid gray;
-      }
-      .page{
-        position:relative;
-        display:block;
-        margin:0 auto;
-        width:500px;
-        height:500px;
-      }
-      #localVideo{
-				width:155px;
-        height:115px;
-        position:absolute;
-        top:15px;
-        right:15px;
-        background-image:url(wei.jpg);
-        background-size:100% 100%;
-      }
-      #remoteVideo{
-        width:540px;
-        height:405px;
-        background-image:url(wei1.jpg);
-        background-size:100% 100%;
-      }
-    
-      }
+    body {
+      display: flex;
+      height: 100vh;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+      padding: 0 50px;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    video {
+      max-width: calc(50% - 100px);
+      margin: 0 50px;
+      box-sizing: border-box;
+      border-radius: 2px;
+      padding: 0;
+      box-shadow: rgba(156, 172, 172, 0.2) 0px 2px 2px, rgba(156, 172, 172, 0.2) 0px 4px 4px, rgba(156, 172, 172, 0.2) 0px 8px 8px, rgba(156, 172, 172, 0.2) 0px 16px 16px, rgba(156, 172, 172, 0.2) 0px 32px 32px, rgba(156, 172, 172, 0.2) 0px 64px 64px;
+    }
+    .copy {
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.5);
+    }
   </style>
 </head>
 <body>
-	
-	  <div id="call-page" class="page">
   <video id="localVideo" autoplay muted></video>
   <video id="remoteVideo" autoplay></video>
-   </div>
- 	<!--!button id="call"><center>接通视频</center></button-->
-  <script src="./webrtc.js"></script>
-  <footer>    
-    <p align="right"><small><b><font color="#000000">贺妍邹启航的掉发渣作</font></small></b></p>  
-    </footer>
-  <body οnlοad="time()">
-        <p align="right"><u><span id="time"></span></u></p>
-    </body>
-
-
+<script src="./webrtc.js" ></script>
+    
 </body>
 </html>
